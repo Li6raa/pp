@@ -1,0 +1,38 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="930" d:DesignHeight="150"
+        x:Class="pp.Edit"
+        Title="Edite" Width=" 930" Height="150">
+    <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Vertical">
+            <TextBlock VerticalAlignment="Center">Добавление данных</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock VerticalAlignment="Center">ID</TextBlock>
+                <TextBox Name="ID" Width="100" Margin="10 0 0 0"></TextBox>
+                <TextBlock VerticalAlignment="Center">Название</TextBlock>
+                <TextBox Name="Название" Width="100" Margin="10 0 0 0"></TextBox>
+                <TextBlock VerticalAlignment="Center">Категория</TextBlock>
+                <TextBox Name="Категория" Width="100" Margin="10 0 0 0"></TextBox>
+                <TextBlock VerticalAlignment="Center">Цена</TextBlock>
+                <TextBox Name="Цена" Width="150" Margin="10 0 0 0"></TextBox>
+                <TextBlock VerticalAlignment="Center">Количество</TextBlock>
+                <TextBox Name="Количество" Width="150" Margin="10 0 0 0"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Background= "White" Content="Добавить" Click="btnDelete_Click" Width="100" Height="30" Margin="0 0 0 10"/>   
+                <Button Background= "White" Content="Вернуться" Click="Comeback" Width="100" Height="30" Margin="0 0 0 10"/> 
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+    <Window.Styles>
+        <Style Selector="Window">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush Source="D:/всякое/Полит/дх/pp/загрузка.jpg" Stretch="UniformToFill" />
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Styles>
+</Window>

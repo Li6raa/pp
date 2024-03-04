@@ -1,0 +1,35 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="250"
+        x:Class="pp.Order"
+        Title="Заказы" Width="600" Height="250">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Вернуться" Click="Comeback" Width="100" Height="30" Margin="0 0 0 10"/>
+                <TextBox Name="Delete" Width="10" Margin="10 0 0 0"></TextBox>
+                <Button Content="Удалить" Click="btnDelete_Click" Width="100" Height="30" Margin="10 0 0 10"/>
+            </StackPanel>
+            <DataGrid Name="TicketsGrid" x:CompileBindings="False" Margin="0,0,0,50">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding ID}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Товар" Binding="{Binding Ассортимент_id}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Клиент" Binding="{Binding Клиент_id}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Услуга" Binding="{Binding Услуга_id}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Цена" Binding="{Binding Цена}"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </ScrollViewer>
+    <Window.Styles>
+        <Style Selector="Window">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush Source="D:/всякое/Полит/дх/pp/загрузка.jpg" Stretch="UniformToFill" />
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Styles>
+</Window>

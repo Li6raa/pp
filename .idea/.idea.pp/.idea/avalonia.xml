@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="pp/Add.axaml" value="pp/pp.csproj" />
+        <entry key="pp/App.axaml" value="pp/pp.csproj" />
+        <entry key="pp/Authorization.axaml" value="pp/pp.csproj" />
+        <entry key="pp/Edite.axaml" value="pp/pp.csproj" />
+        <entry key="pp/MainWindow.axaml" value="pp/pp.csproj" />
+        <entry key="pp/Order.axaml" value="pp/pp.csproj" />
+        <entry key="pp/assortment.axaml" value="pp/pp.csproj" />
+        <entry key="pp/main_admin.axaml" value="pp/pp.csproj" />
+        <entry key="pp/procces.axaml" value="pp/pp.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

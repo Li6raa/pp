@@ -1,0 +1,50 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="850" d:DesignHeight="450"
+        x:Class="pp.assortment"
+        Title="Ассортимент" Width="850" Height="450">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                        <Button Background= "White" Content="Вернуться" Click="Comeback" Width="100" Height="30" Margin="0 0 0 10"/>
+                        <Button Background= "White" Content="Добавить" Click="GoAssort" Width="100" Height="30" Margin="10 0 0 10"/>
+                        <Button Background= "White" Content="Редактировать" Click="EditAssort" Width="130" Height="30" Margin="10 0 0 10"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Поиск по Названию</TextBlock>
+                        <TextBox Name="txtSearch" Width="200" Margin="10 0 0 0" TextChanged="TxtSearch_OnTextChanged"></TextBox>
+                        <TextBlock VerticalAlignment="Center" x:Name="txtShow">Фильтрация по категории:</TextBlock>
+                        <ComboBox Name="Cmdstatus" Width="200"
+                                  x:CompileBindings="False"
+                                  SelectionChanged="Cmdstatus_OnSelectionChanged">
+                                <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                                <TextBlock Text="{Binding Название}"></TextBlock>
+                                        </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                        </ComboBox>
+                </StackPanel>
+                <DataGrid  Name="АссортGrid" x:CompileBindings="False" Margin="0,0,0,50">
+                        <DataGrid.Columns>
+                                <DataGridTextColumn Header="ID" Binding="{Binding ID}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Название" Binding="{Binding Название}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Категория" Binding="{Binding Категория_id}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Цена" Binding="{Binding Цена}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Количество" Binding="{Binding Количество}"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                </DataGrid>
+                
+        </StackPanel>
+    </ScrollViewer>
+        <Window.Styles>
+                <Style Selector="Window">
+                        <Setter Property="Background">
+                                <Setter.Value>
+                                        <ImageBrush Source="D:/всякое/Полит/дх/pp/загрузка.jpg" Stretch="UniformToFill" />
+                                </Setter.Value>
+                        </Setter>
+                </Style>
+        </Window.Styles>
+</Window>
